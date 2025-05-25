@@ -1,0 +1,441 @@
+/* Minimalist Portfolio Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Navigation enhancements */
+nav {
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.text-gray-900::after {
+    width: 100%;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Enhanced Education Section */
+.education-container {
+    position: relative;
+}
+
+.education-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.1);
+}
+
+.gpa-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+}
+
+.achievement-section {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+/* Enhanced Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skill-group {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.skill-group:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.12);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.skill-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.skill-group:hover .skill-icon {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1d4ed8;
+}
+
+.skill-category-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: 0.025em;
+}
+
+.skill-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item-primary {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    color: #0c4a6e;
+    border: 1px solid #bae6fd;
+}
+
+.skill-item-primary:hover {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+    transform: translateX(4px);
+}
+
+.skill-item-secondary {
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-item-secondary:hover {
+    background: #f1f5f9;
+    color: #334155;
+    transform: translateX(2px);
+}
+
+/* Soft Skills */
+.soft-skill-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.soft-skill-tag:hover {
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Project cards */
+.project-card div {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover div {
+    border-color: #e5e7eb;
+}
+
+/* Tech tags for projects */
+.tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Button animations */
+button, a[class*="bg-gray-900"], a[class*="border-gray"] {
+    transition: all 0.2s ease;
+}
+
+/* Hover effects for interactive elements */
+a:hover {
+    text-decoration: none;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* GitHub icon hover effect */
+.github-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease;
+    transform-origin: top;
+}
+
+#mobile-menu.hidden {
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+/* Notification styles */
+.notification {
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Improved typography */
+h1, h2, h3 {
+    letter-spacing: -0.025em;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Enhanced animations */
+.fade-in-complete {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-group {
+        padding: 1rem;
+    }
+    
+    .skill-header {
+        gap: 0.5rem;
+    }
+    
+    .skill-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.6875rem;
+        padding: 0.1875rem 0.5rem;
+    }
+    
+    .education-card {
+        padding: 1rem;
+    }
+    
+    .achievement-item {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .skills-grid {
+        gap: 0.75rem;
+    }
+    
+    .skill-group {
+        padding: 0.75rem;
+    }
+    
+    .gpa-badge {
+        font-size: 0.6875rem;
+        padding: 0.1875rem 0.625rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, #mobile-menu {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .project-card, .skill-group, .education-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .skill-group::before {
+        display: none;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .skill-group:hover,
+    .education-card:hover,
+    .skill-item:hover,
+    .soft-skill-tag:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tech-tag,
+    .skill-item,
+    .soft-skill-tag {
+        border: 1px solid currentColor;
+    }
+    
+    .project-card div,
+    .skill-group,
+    .education-card {
+        border-width: 2px;
+    }
+}
+
+
