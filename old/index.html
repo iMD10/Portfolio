@@ -6,11 +6,9 @@
     <title>Muhannad Alfawzan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="image.png" sizes="32x32" type="image/png" />
-
     <link rel="stylesheet" href="styles.css" />
     <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
@@ -25,127 +23,71 @@
       };
     </script>
   </head>
-  <body class="transition-colors duration-300">
+  <body class="bg-white text-gray-900 font-sans antialiased">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300"
+      class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50"
     >
       <div class="max-w-5xl mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
-          <div class="text-lg font-medium text-gray-900 dark:text-white">
-            Muhannad Alfawzan
-          </div>
-          <div class="hidden md:flex items-center space-x-6">
+          <div class="text-lg font-medium text-gray-900">Muhannad Alfawzan</div>
+          <div class="hidden md:flex space-x-6">
             <a
               href="#about"
-              class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+              class="nav-link text-gray-600 hover:text-gray-900 transition-colors text-sm"
               >About</a
             >
             <a
               href="#skills"
-              class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+              class="nav-link text-gray-600 hover:text-gray-900 transition-colors text-sm"
               >Skills</a
             >
             <a
               href="#projects"
-              class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+              class="nav-link text-gray-600 hover:text-gray-900 transition-colors text-sm"
               >Projects</a
             >
             <a
               href="#contact"
-              class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+              class="nav-link text-gray-600 hover:text-gray-900 transition-colors text-sm"
               >Contact</a
             >
-            <button
-              id="theme-toggle"
-              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 theme-toggle-btn"
-              title="Toggle theme"
-            >
-              <svg
-                id="theme-toggle-dark-icon"
-                class="w-5 h-5 hidden"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                ></path>
-              </svg>
-              <svg
-                id="theme-toggle-light-icon"
-                class="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 17.77L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"
-                ></path>
-              </svg>
-            </button>
           </div>
-          <div class="flex items-center space-x-2 md:hidden">
-            <button
-              id="theme-toggle-mobile"
-              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 theme-toggle-btn"
-              title="Toggle theme"
+          <button id="mobile-menu-button" class="md:hidden p-2">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <svg
-                id="theme-toggle-dark-icon-mobile"
-                class="w-5 h-5 hidden"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                ></path>
-              </svg>
-              <svg
-                id="theme-toggle-light-icon-mobile"
-                class="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 17.77L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"
-                ></path>
-              </svg>
-            </button>
-            <button id="mobile-menu-button" class="p-2">
-              <svg
-                class="w-5 h-5 text-gray-600 dark:text-gray-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
           <a
             href="#about"
-            class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+            class="block py-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >About</a
           >
           <a
             href="#skills"
-            class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+            class="block py-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >Skills</a
           >
           <a
             href="#projects"
-            class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+            class="block py-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >Projects</a
           >
           <a
             href="#contact"
-            class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm"
+            class="block py-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >Contact</a
           >
         </div>
@@ -157,71 +99,43 @@
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
           <h1
-            class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight hero-title"
+            class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight"
           >
             Muhannad Alfawzan
           </h1>
           <p
-            id="typewriter-text"
-            class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed min-h-[3rem]"
+            class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            <!-- Typewriter effect will fill this -->
+            Computer Science student passionate about AI and software
+            development. Building meaningful solutions through clean code and
+            innovative thinking.
           </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          <a
+            href="#projects"
+            class="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all duration-200 hover:transform hover:-translate-y-0.5"
           >
-            <a
-              href="#projects"
-              class="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 hover:transform hover:-translate-y-0.5 group"
+            View My Work
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <span class="fun-copy">View My Work</span>
-              <svg
-                class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="mailto:Mohanad.alfawzan1@gmail.com"
-              class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
-            >
-              <svg
-                class="mr-2 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-              <span class="fun-copy">Let's Chat</span>
-            </a>
-          </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
         </div>
 
         <!-- About & Education -->
         <div class="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-          <div class="about-section">
-            <h2
-              class="text-lg font-semibold mb-4 text-gray-900 dark:text-white"
-            >
-              About Me
-            </h2>
-            <p
-              class="text-gray-600 dark:text-gray-300 leading-relaxed text-base"
-            >
+          <div>
+            <h2 class="text-lg font-semibold mb-4 text-gray-900">About</h2>
+            <p class="text-gray-600 leading-relaxed text-base">
               As a Computer Science student at Qassim University, I am deeply
               passionate about software development and exploring the
               transformative potential of AI. I approach challenges with a
@@ -234,39 +148,24 @@
 
           <!-- Enhanced Education Section -->
           <div class="education-container">
-            <h2
-              class="text-lg font-semibold mb-4 text-gray-900 dark:text-white"
-            >
-              Education
-            </h2>
+            <h2 class="text-lg font-semibold mb-4 text-gray-900">Education</h2>
             <div class="education-card">
               <div class="mb-3">
-                <h3
-                  class="text-base font-semibold text-gray-900 dark:text-white"
-                >
+                <h3 class="text-base font-semibold text-gray-900">
                   Bachelor of Science in Computer Science
                 </h3>
-                <p class="text-gray-700 dark:text-gray-300 font-medium">
-                  Qassim University
-                </p>
+                <p class="text-gray-700 font-medium">Qassim University</p>
                 <div class="flex items-center justify-between mt-2">
-                  <span class="text-sm text-gray-500 dark:text-gray-400"
-                    >07/2021 - 06/2026</span
-                  >
+                  <span class="text-sm text-gray-500">07/2021 - 06/2026</span>
+                  <!-- <span class="gpa-badge">GPA /5</span> -->
                 </div>
               </div>
 
-              <div
-                class="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700"
-              >
-                <p
-                  class="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium"
-                >
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <p class="text-sm text-gray-600 mb-2 font-medium">
                   Relevant Coursework:
                 </p>
-                <p
-                  class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed"
-                >
+                <p class="text-sm text-gray-600 leading-relaxed">
                   Data Structures, Algorithms, Artificial Intelligence, Database
                   Systems, Software Engineering
                 </p>
@@ -288,12 +187,10 @@
                     </svg>
                   </div>
                   <div class="achievement-content">
-                    <p
-                      class="text-sm font-medium text-gray-800 dark:text-gray-200"
-                    >
+                    <p class="text-sm font-medium text-gray-800">
                       Academic Excellence Award
                     </p>
-                    <p class="text-xs text-gray-600 dark:text-gray-400">
+                    <p class="text-xs text-gray-600">
                       3 consecutive years (2022–2024)
                     </p>
                   </div>
@@ -306,16 +203,13 @@
     </section>
 
     <!-- Enhanced Skills Section -->
-    <section
-      id="skills"
-      class="py-16 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors duration-300"
-    >
+    <section id="skills" class="py-16 px-6 bg-gray-50">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-            Technical Arsenal
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">
+            Technical Skills
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-sm">
+          <p class="text-gray-600 max-w-2xl mx-auto text-sm">
             Curated technical expertise across programming, development, and
             emerging technologies
           </p>
@@ -343,11 +237,11 @@
               <h3 class="skill-category-title">Programming Languages</h3>
             </div>
             <div class="skill-items">
-              <div class="skill-item skill-item-primary">Python 🐍</div>
-              <div class="skill-item skill-item-primary">Java ☕</div>
-              <div class="skill-item skill-item-secondary">JavaScript ✨</div>
-              <div class="skill-item skill-item-secondary">C++ ⚡</div>
-              <div class="skill-item skill-item-secondary">SQL 📊</div>
+              <div class="skill-item skill-item-primary">Python</div>
+              <div class="skill-item skill-item-primary">Java</div>
+              <div class="skill-item skill-item-secondary">JavaScript</div>
+              <div class="skill-item skill-item-secondary">C++</div>
+              <div class="skill-item skill-item-secondary">SQL</div>
             </div>
           </div>
 
@@ -372,9 +266,9 @@
               <h3 class="skill-category-title">Web Development</h3>
             </div>
             <div class="skill-items">
-              <div class="skill-item skill-item-primary">React ⚛️</div>
-              <div class="skill-item skill-item-secondary">Node.js 🟢</div>
-              <div class="skill-item skill-item-secondary">Express.js 🚀</div>
+              <div class="skill-item skill-item-primary">React</div>
+              <div class="skill-item skill-item-secondary">Node.js</div>
+              <div class="skill-item skill-item-secondary">Express.js</div>
             </div>
           </div>
 
@@ -399,9 +293,9 @@
               <h3 class="skill-category-title">Data & Databases</h3>
             </div>
             <div class="skill-items">
-              <div class="skill-item skill-item-primary">PostgreSQL 🐘</div>
-              <div class="skill-item skill-item-secondary">MySQL 🐬</div>
-              <div class="skill-item skill-item-secondary">Supabase 🔥</div>
+              <div class="skill-item skill-item-primary">PostgreSQL</div>
+              <div class="skill-item skill-item-secondary">MySQL</div>
+              <div class="skill-item skill-item-secondary">Supabase</div>
             </div>
           </div>
 
@@ -426,8 +320,8 @@
               <h3 class="skill-category-title">AI & Machine Learning</h3>
             </div>
             <div class="skill-items">
-              <div class="skill-item skill-item-primary">TensorFlow 🧠</div>
-              <div class="skill-item skill-item-primary">Keras 🤖</div>
+              <div class="skill-item skill-item-primary">TensorFlow</div>
+              <div class="skill-item skill-item-primary">Keras</div>
             </div>
           </div>
 
@@ -458,26 +352,22 @@
               <h3 class="skill-category-title">Tools & Collaboration</h3>
             </div>
             <div class="skill-items">
-              <div class="skill-item skill-item-primary">Git 🌿</div>
-              <div class="skill-item skill-item-secondary">GitHub 🐙</div>
+              <div class="skill-item skill-item-primary">Git</div>
+              <div class="skill-item skill-item-secondary">GitHub</div>
             </div>
           </div>
         </div>
 
         <!-- Core Competencies Section -->
-        <div
-          class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300"
-        >
-          <h3
-            class="text-lg font-semibold mb-6 text-gray-900 dark:text-white text-center"
-          >
-            Core Superpowers
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h3 class="text-lg font-semibold mb-6 text-gray-900 text-center">
+            Core Competencies
           </h3>
           <div class="flex flex-wrap justify-center gap-3">
-            <div class="soft-skill-tag">Leadership 👑</div>
-            <div class="soft-skill-tag">Problem-Solving 🧩</div>
-            <div class="soft-skill-tag">Teamwork 🤝</div>
-            <div class="soft-skill-tag">Communication 💬</div>
+            <div class="soft-skill-tag">Leadership</div>
+            <div class="soft-skill-tag">Problem-Solving</div>
+            <div class="soft-skill-tag">Teamwork</div>
+            <div class="soft-skill-tag">Communication</div>
           </div>
         </div>
       </div>
@@ -487,33 +377,33 @@
     <section id="projects" class="py-16 px-6">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">
             Featured Projects
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A curated collection of projects that showcase my technical prowess
-            and creative problem-solving approach
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            A selection of projects demonstrating my technical skills and
+            problem-solving approach
           </p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-8">
           <div class="project-card group">
             <div
-              class="floating-card bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300"
+              class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
             >
               <div class="flex items-start justify-between mb-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 class="text-lg font-semibold text-gray-900">
                   Car Rental System
                 </h3>
                 <div class="flex space-x-2">
                   <a
                     href="https://github.com/iMD10/CS342-Car-Rental"
                     target="_blank"
-                    class="github-link text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    class="github-link text-gray-400 hover:text-gray-600 transition-colors"
                     title="View Code"
                   >
                     <svg
-                      class="w-5 h-5 bounce-on-hover"
+                      class="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -524,41 +414,37 @@
                   </a>
                 </div>
               </div>
-              <p
-                class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed"
-              >
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                 Desktop application with Java Swing GUI and PostgreSQL database.
                 Features complete CRUD operations for rental management with
-                optimized database performance. 🚗💨
+                optimized database performance.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tech-tag">Java</span>
                 <span class="tech-tag">Swing</span>
                 <span class="tech-tag">PostgreSQL</span>
               </div>
-              <p class="text-xs text-gray-400 dark:text-gray-500">
-                Nov 2024 – Dec 2024
-              </p>
+              <p class="text-xs text-gray-400">Nov 2024 – Dec 2024</p>
             </div>
           </div>
 
           <div class="project-card group">
             <div
-              class="floating-card bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300"
+              class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
             >
               <div class="flex items-start justify-between mb-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 class="text-lg font-semibold text-gray-900">
                   CNN Image Classification
                 </h3>
                 <div class="flex space-x-2">
                   <a
                     href="https://github.com/iMD10/cnn-image-classification"
                     target="_blank"
-                    class="github-link text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    class="github-link text-gray-400 hover:text-gray-600 transition-colors"
                     title="View Code"
                   >
                     <svg
-                      class="w-5 h-5 bounce-on-hover"
+                      class="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -569,41 +455,37 @@
                   </a>
                 </div>
               </div>
-              <p
-                class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed"
-              >
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                 Deep learning model using CNN architecture for image
                 classification. Implemented data augmentation techniques to
-                achieve high test accuracy on image datasets. 🧠📷
+                achieve high test accuracy on image datasets.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">TensorFlow</span>
                 <span class="tech-tag">Keras</span>
               </div>
-              <p class="text-xs text-gray-400 dark:text-gray-500">
-                Apr 2025 – May 2025
-              </p>
+              <p class="text-xs text-gray-400">Apr 2025 – May 2025</p>
             </div>
           </div>
 
           <div class="project-card group">
             <div
-              class="floating-card bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300"
+              class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
             >
               <div class="flex items-start justify-between mb-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 class="text-lg font-semibold text-gray-900">
                   Text Similarity Analyzer
                 </h3>
                 <div class="flex space-x-2">
                   <a
                     href="https://github.com/iMD10/CS315-Texts-Similarity"
                     target="_blank"
-                    class="github-link text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    class="github-link text-gray-400 hover:text-gray-600 transition-colors"
                     title="View Code"
                   >
                     <svg
-                      class="w-5 h-5 bounce-on-hover"
+                      class="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -614,38 +496,34 @@
                   </a>
                 </div>
               </div>
-              <p
-                class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed"
-              >
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                 Python tool for analyzing document similarity using Jaccard
                 similarity algorithm. Designed for efficient processing and
-                analysis of large text datasets with optimized performance. 📝🔍
+                analysis of large text datasets with optimized performance.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Text Processing</span>
               </div>
-              <p class="text-xs text-gray-400 dark:text-gray-500">Oct 2024</p>
+              <p class="text-xs text-gray-400">Oct 2024</p>
             </div>
           </div>
 
           <div class="project-card group">
             <div
-              class="floating-card bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300"
+              class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
             >
               <div class="flex items-start justify-between mb-4">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  Tic Tac Toe
-                </h3>
+                <h3 class="text-lg font-semibold text-gray-900">Tic Tac Toe</h3>
                 <div class="flex space-x-2">
                   <a
                     href="https://github.com/iMD10/tic-tac-toe-python"
                     target="_blank"
-                    class="github-link text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    class="github-link text-gray-400 hover:text-gray-600 transition-colors"
                     title="View Code"
                   >
                     <svg
-                      class="w-5 h-5 bounce-on-hover"
+                      class="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -656,70 +534,58 @@
                   </a>
                 </div>
               </div>
-              <p
-                class="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed"
-              >
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                 A classic Tic Tac Toe game built in Python using Tkinter.
                 Features both Player vs Player and Player vs Computer modes with
-                basic AI logic that can win or block intelligently. 🎮⚡
+                basic AI logic that can win or block intelligently.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Tkinter</span>
               </div>
-              <p class="text-xs text-gray-400 dark:text-gray-500">May 2025</p>
+              <p class="text-xs text-gray-400">May 2025</p>
             </div>
           </div>
         </div>
 
         <div class="text-center mt-8">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            <span class="fun-copy">More awesome projects brewing on my</span>
+          <p class="text-sm text-gray-500">
+            More projects available on my
             <a
               href="https://github.com/iMD10"
               target="_blank"
-              class="text-gray-900 dark:text-white underline hover:no-underline transition-colors"
+              class="text-gray-900 underline hover:no-underline"
+              >GitHub profile</a
             >
-              GitHub profile
-            </a>
-            🚀
           </p>
         </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section
-      class="py-16 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors duration-300"
-    >
+    <section class="py-16 px-6 bg-gray-50">
       <div class="max-w-4xl mx-auto">
-        <h2
-          class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-white"
-        >
-          Professional Journey
+        <h2 class="text-2xl font-bold mb-8 text-center text-gray-900">
+          Experience
         </h2>
-        <div
-          class="floating-card bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all duration-300"
-        >
+        <div class="bg-white rounded-xl border border-gray-200 p-6">
           <div
             class="flex flex-col md:flex-row md:items-start justify-between mb-3"
           >
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Technical Consultant 💼
+              <h3 class="text-lg font-semibold text-gray-900">
+                Technical Consultant
               </h3>
-              <p class="text-gray-600 dark:text-gray-300">
-                Quran Memorization Association
-              </p>
+              <p class="text-gray-600">Quran Memorization Association</p>
             </div>
-            <span class="text-sm text-gray-500 dark:text-gray-400 mt-1 md:mt-0"
+            <span class="text-sm text-gray-500 mt-1 md:mt-0"
               >Aug 2024 – Present</span
             >
           </div>
-          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+          <p class="text-gray-700 text-sm leading-relaxed">
             Streamlined data tracking and reporting processes using Coda and
             Google Sheets. Automated manual workflows, reducing administrative
-            workload by 30% and improving data accuracy. Making data dance! 📊✨
+            workload by 30% and improving data accuracy.
           </p>
         </div>
       </div>
@@ -728,13 +594,11 @@
     <!-- Contact Section -->
     <section id="contact" class="py-16 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-          Let's Build Something Amazing
-        </h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-          I'm always excited about new opportunities and collaborations. Drop me
-          a line if you'd like to discuss potential projects or just want to
-          geek out about tech! 🤝
+        <h2 class="text-2xl font-bold mb-4 text-gray-900">Let's Connect</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          I'm always interested in new opportunities and collaborations. Feel
+          free to reach out if you'd like to discuss potential projects or just
+          say hello.
         </p>
 
         <div
@@ -742,10 +606,10 @@
         >
           <a
             href="mailto:Mohanad.alfawzan1@gmail.com"
-            class="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-200 hover:transform hover:-translate-y-0.5 group"
+            class="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-all duration-200 hover:transform hover:-translate-y-0.5"
           >
             <svg
-              class="mr-2 w-4 h-4 group-hover:bounce"
+              class="mr-2 w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -757,19 +621,15 @@
                 d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               ></path>
             </svg>
-            <span class="fun-copy">Get in Touch</span>
+            Get in Touch
           </a>
 
           <a
             href="https://linkedin.com/in/muhannad-alfawzan-023348246"
             target="_blank"
-            class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 group"
+            class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-all duration-200"
           >
-            <svg
-              class="mr-2 w-4 h-4 group-hover:scale-110 transition-transform"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
               />
@@ -782,15 +642,15 @@
           <a
             href="https://github.com/iMD10"
             target="_blank"
-            class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors group"
+            class="text-gray-500 hover:text-gray-700 transition-colors"
           >
             <svg
-              class="w-6 h-6 mx-auto group-hover:rotate-12 transition-transform duration-300"
+              class="w-6 h-6 mx-auto"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.404 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
               />
             </svg>
           </a>
@@ -799,14 +659,11 @@
     </section>
 
     <!-- Footer -->
-    <footer
-      class="bg-gray-50 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-700 py-8 px-6 transition-colors duration-300"
-    >
+    <footer class="bg-gray-50 border-t border-gray-200 py-8 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          © 2025 Muhannad Alfawzan.
-          <span class="fun-copy">Crafted with passion</span> for clean code and
-          delightful user experiences. ✨
+        <p class="text-sm text-gray-500">
+          © 2025 Muhannad Alfawzan. Built with passion for clean code and great
+          user experiences.
         </p>
       </div>
     </footer>
